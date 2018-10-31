@@ -69,19 +69,18 @@ android {
 
 dependencies {
 
+    api project(':CommonRes')
     api fileTree(include: ['*.jar'], dir: 'libs')
     api(rootProject.ext.dependencies["arouter"]) {
         exclude module: 'support-v4'
         exclude module: 'support-annotations'
     }
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
-
     if (isBuildModule.toBoolean()) {
-        api project(':CommonRes')
         //test
-        debugApi rootProject.ext.dependencies["canary-debug"]
-        releaseApi rootProject.ext.dependencies["canary-release"]
-        testApi rootProject.ext.dependencies["canary-release"]
+        debugImplementation rootProject.ext.dependencies["canary-debug"]
+        releaseImplementation rootProject.ext.dependencies["canary-release"]
+        testImplementation rootProject.ext.dependencies["canary-release"]
     } else {
     }
 }
