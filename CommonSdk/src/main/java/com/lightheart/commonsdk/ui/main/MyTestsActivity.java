@@ -20,7 +20,7 @@ import butterknife.Unbinder;
 import dagger.android.support.DaggerAppCompatActivity;
 
 @Route(path = "/xixi/main1")
-public class MainActivity extends DaggerAppCompatActivity {
+public class MyTestsActivity extends DaggerAppCompatActivity {
     @Inject
     Person person;
 

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFFFF"
-    tools:context=".ui.main.MainActivity">
+    tools:context=".ui.main.MyTestsActivity">
 
     <TextView
         android:id="@+id/show_some_thing"

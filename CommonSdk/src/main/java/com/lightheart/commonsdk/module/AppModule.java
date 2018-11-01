@@ -2,7 +2,15 @@ package com.lightheart.commonsdk.module;
 
 
 
+import android.app.Application;
+
+import com.lightheart.commonsdk.BaseApplication;
+
+import javax.inject.Named;
+import javax.inject.Singleton;
+
 import dagger.Module;
+import dagger.Provides;
 
 /**
  * @author Lai
@@ -11,16 +19,16 @@ import dagger.Module;
  */
 @Module
 public class AppModule {
-//    @Provides
-//    @Singleton
-//    Application provideContext(MTC application) {
-//        return application;
-//    }
+    @Provides
+    @Singleton
+    Application provideContext(BaseApplication application) {
+        return application;
+    }
 
-//    @Named("jk")
-//    @Provides
-//    @Singleton
-//    String provideContext(String name) {
-//        return name;
-//    }
+    @Named("jk")
+    @Provides
+    @Singleton
+    String provideName(String name) {
+        return name;
+    }
 }

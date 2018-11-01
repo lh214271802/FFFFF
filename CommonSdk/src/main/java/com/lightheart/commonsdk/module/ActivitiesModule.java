@@ -2,7 +2,7 @@ package com.lightheart.commonsdk.module;
 
 
 import com.lightheart.commonsdk.scope.ActivityScope;
-import com.lightheart.commonsdk.ui.main.MainActivity;
+import com.lightheart.commonsdk.ui.main.MyTestsActivity;
 import com.lightheart.commonsdk.ui.main.MainActivityModule;
 import com.lightheart.commonsdk.ui.newact.NewActivity;
 import com.lightheart.commonsdk.ui.newact.NewActivityModule;
@@ -20,7 +20,7 @@ public abstract class ActivitiesModule {
 
     @ContributesAndroidInjector(modules = MainActivityModule.class)
     @ActivityScope
-    abstract MainActivity mainActivityInjector();
+    abstract MyTestsActivity mainActivityInjector();
 
     @ContributesAndroidInjector(modules = NewActivityModule.class)
     @ActivityScope
