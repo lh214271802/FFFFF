@@ -7,4 +7,8 @@ import com.lightheart.commonsdk.BaseApplication;
  * @date 2018/10/31
  */
 public class FApplication extends BaseApplication {
+    @Override
+    public void onCreate() {
+        super.onCreate();
+    }
 }
