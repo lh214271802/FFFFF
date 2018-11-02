@@ -62,6 +62,12 @@ dependencies {
         exclude module: 'support-v4'
         exclude module: 'support-annotations'
     }
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    annotationProcessor rootProject.ext.dependencies["dagger2-android-processor"]
+    annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
+        exclude module: 'support-annotations'
+    }
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 
     //test
